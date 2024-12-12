@@ -102,18 +102,18 @@ Este proyecto desarrolla un modelo de XGBoost para estimar el score de crédito 
 
 El modelo propone una solución robusta y adaptable para predecir el comportamiento de pago de clientes a corto, mediano y largo plazo, alineado con las necesidades del sector Fintech. Se utilizó validación cruzada y métricas como la *Matriz de Confusión* y el *Estadístico Kolmogorov-Smirnov (KS)* para asegurar la fiabilidad del modelo, además de considerar la integración de nuevas fuentes de datos y técnicas avanzadas de machine learning para mejorar su precisión.
 
-### Datos
+## Datos
 
 En el presente análisis se busca identificar las variables explicativas del vencimiento de clientes en la cartera, utilizando para ello la creación de variables sintéticas y el análisis de correlación. El objetivo principal es entender los factores que inciden en el incumplimiento de pagos, generando información que permita tomar decisiones estratégicas para la gestión de la cartera.
 
-### Datos Base
+## Datos Base
 
 Se cuenta con dos bases de datos principales:
 
-	*Facturas de ventas*: Información relacionada con las transacciones realizadas por los clientes.
+	Facturas de ventas: Información relacionada con las transacciones realizadas por los clientes.
 	Clientes: Datos demográficos y características específicas de los clientes registrados.
 
-### Creación de Variables Sintéticas
+## Creación de Variables Sintéticas
 
 A partir de los datos disponibles, se han diseñado variables sintéticas que explican el comportamiento de pago de los clientes, específicamente relacionadas con el vencimiento. Estas variables son:
 
