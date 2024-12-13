@@ -16,7 +16,7 @@ def process_saldos_pendientes(num=int):
     time1 = datetime.now()
     
     # Ruta carpeta con archivos
-    ruta_archivos = "C:/Users/aperezl/OneDrive - kumo2 (1)/Escritorio/2023/Kaizen/Base modelo/saldos-pendientes/"
+    ruta_archivos = "C:/Users/Aleja/OneDrive/Escritorio/Icesi/I Semestre/Gestión estrategica/AlmanaConsultory/AlmanaConsultory/Información/saldos-pendientes/"
     
     # Archivos a utilizar
     dirs = os.listdir(ruta_archivos) # Listado de archivos en una carpeta
@@ -74,7 +74,7 @@ def process_comportamiento_moroso():
     time1 = datetime.now()
     
     # Ruta carpeta con archivos
-    ruta_archivos = "C:/Users/aperezl/OneDrive - kumo2 (1)/Escritorio/2023/Kaizen/Base modelo/saldos-pendientes/"
+    ruta_archivos = "C:/Users/Aleja/OneDrive/Escritorio/Icesi/I Semestre/Gestión estrategica/AlmanaConsultory/AlmanaConsultory/Información/saldos-pendientes/"
     
     # Archivos a utilizar
     dirs = os.listdir(ruta_archivos) # Listado de archivos en una carpeta
@@ -107,12 +107,12 @@ def process_comportamiento_moroso():
         df_agrup = df.groupby('Cliente').agg({'Dias vencidos':'max'}).reset_index()
         df_agrup.rename(columns={'Cliente':'nit','Dias vencidos':'mora_max_'+i[-11:-5]}, inplace=True)
         # Guardando en carpeta temporal
-        df_agrup.to_csv(os.getcwd()+'\\Salidas-temporales\\'+i[-11:-5]+'.csv', sep='|', index=False)
+        df_agrup.to_csv(os.getcwd()+'//Salidas-temporales//'+i[-11:-5]+'.csv', sep='|', index=False)
         del df
         
     # Archivos temporales
-    dirs = os.listdir(os.getcwd()+'\\Salidas-temporales\\') # Listado de archivos en una carpeta
-    dirs = [os.getcwd()+'\\Salidas-temporales\\' + x for x in dirs]
+    dirs = os.listdir(os.getcwd()+'//Salidas-temporales//') # Listado de archivos en una carpeta
+    dirs = [os.getcwd()+'//Salidas-temporales//' + x for x in dirs]
     
     # Llamando archivos y uniendo en un solo dataframe
     df = pd.read_csv(dirs[0], sep='|')
@@ -161,7 +161,7 @@ def process_comportamiento_pago():
     time1 = datetime.now()
     
     # Ruta archivo
-    ruta_archivos = "C:/Users/aperezl/OneDrive - kumo2 (1)/Escritorio/2023/Kaizen/Base modelo/pagos/"
+    ruta_archivos = "C:/Users/Aleja/OneDrive/Escritorio/Icesi/I Semestre/Gestión estrategica/AlmanaConsultory/AlmanaConsultory/Información/pagos/"
     
     # Archivo a cargar
     dirs = os.listdir(ruta_archivos) # Listado de archivos en una carpeta
