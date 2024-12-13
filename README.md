@@ -131,4 +131,15 @@ Con el fin de analizar tendencias y patrones en el comportamiento de pago de los
 
 #### Análisis de Correlación
 
-Para determinar las variables que tienen mayor influencia sobre el vencimiento de clientes, se seleccionaron las variables con una correlación superior al 70% con la variable objetivo.
+Para determinar las variables que tienen mayor influencia sobre el vencimiento de clientes, se seleccionaron las variables con una correlación superior al 70%, de aquí salen 16 variables.
+
+De igual forma, se gestiona un arbol de decisión para determinar de estas 16 variables cuáles son las más importantes, el arbol tiene cómo umbrales un promedio de importancia de las variables, de aquí quedan cómo
+
+   1. Valor facturas a corte
+	2. Promedio facturas a corte
+    3. Porcentaje uso a corte
+    4. Mora máxima a 12m
+
+### Modelos
+
+Posteriormente, se implementan modelos de aprendizaje no supervisado, como árboles de clasificación y XGBoost, con el objetivo de clasificar a los clientes según su vencimiento. Para la evaluación de los modelos, se utiliza la curva ROC, lo que permite identificar el punto óptimo y ajustar los valores de los hiperparámetros de manera iterativa.
